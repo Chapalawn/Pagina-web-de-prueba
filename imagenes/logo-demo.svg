@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1962 556" role="img" aria-labelledby="title desc">
+  <title id="title">Tienda Demo</title>
+  <desc id="desc">Logotipo genérico de demostración en escala de grises.</desc>
+
+  <rect width="1962" height="556" fill="none"/>
+
+  <g transform="translate(40 82)">
+    <rect x="0" y="0" width="160" height="160" rx="18" fill="#202020"/>
+    <rect x="180" y="0" width="160" height="160" rx="18" fill="#777774"/>
+    <rect x="0" y="180" width="160" height="160" rx="18" fill="#C9C9C6"/>
+    <rect x="180" y="180" width="160" height="160" rx="18" fill="#E7E7E5"/>
+  </g>
+
+  <g fill="#202020">
+    <text x="455" y="245"
+          font-family="Arial, Helvetica, sans-serif"
+          font-size="178"
+          font-weight="800"
+          letter-spacing="10">TIENDA</text>
+    <text x="455" y="420"
+          font-family="Arial, Helvetica, sans-serif"
+          font-size="178"
+          font-weight="300"
+          letter-spacing="20">DEMO</text>
+  </g>
+
+  <line x1="455" y1="470" x2="1850" y2="470" stroke="#C9C9C6" stroke-width="8"/>
+</svg>
