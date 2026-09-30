@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda Demo | Inicio</title>
-    <link rel="stylesheet" href="css/styles.css?v=20260929-3">
+    <link rel="stylesheet" href="css/styles.css?v=20260930-visual1">
 </head>
 <body>
 
     <header class="header">
-        <a class="logo" href="index.html">TIENDA DEMO</a>
+        <a class="logo logo-imagen" href="index.html" aria-label="Tienda Demo">
+            <img src="imagenes/logo-demo.svg" alt="Tienda Demo">
+        </a>
 
         <div class="header-derecha">
             <nav class="nav" aria-label="Menú principal">
@@ -24,20 +26,33 @@
 
     <main>
         <section class="hero hero-inicio">
-            <div class="hero-contenido">
-                <p class="subtitulo">DISEÑO · ESTILO · COLECCIÓN</p>
+            <div class="hero-layout">
+                <div class="hero-contenido">
+                    <p class="subtitulo">DISEÑO · ESTILO · COLECCIÓN</p>
 
-                <h1>Una marca creada con una idea detrás.</h1>
+                    <h1>Una tienda de prueba con una identidad visual clara.</h1>
 
-                <p class="descripcion">
-                    Este sitio es una demostración pública de una futura marca de ropa.
-                    La propuesta busca unir diseño, identidad y prendas de uso cotidiano
-                    dentro de una experiencia simple y cercana.
-                </p>
+                    <p class="descripcion">
+                        Este sitio funciona como demostración de una futura tienda de ropa.
+                        La estructura, navegación y experiencia se mantienen visibles sin
+                        utilizar nombres, diseños ni información de una marca real.
+                    </p>
 
-                <div class="acciones-hero">
-                    <a class="boton" href="html/quienes-somos.html">Conocer nuestra historia</a>
-                    <a class="boton boton-secundario" href="html/catalogo.html">Explorar catálogo</a>
+                    <div class="acciones-hero">
+                        <a class="boton" href="html/quienes-somos.html">Conocer el proyecto</a>
+                        <a class="boton boton-secundario" href="html/catalogo.html">Explorar catálogo</a>
+                    </div>
+                </div>
+
+                <div class="hero-visual-demo" aria-label="Identidad visual de demostración">
+                    <div class="hero-logo-marco">
+                        <img src="imagenes/logo-demo.svg" alt="Tienda Demo">
+                    </div>
+
+                    <div class="hero-visual-pie">
+                        <span>IDENTIDAD VISUAL</span>
+                        <span>PROTOTIPO 01</span>
+                    </div>
                 </div>
             </div>
         </section>
