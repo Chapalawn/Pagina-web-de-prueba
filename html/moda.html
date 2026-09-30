@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Demo | Moda</title>
+    <link rel="stylesheet" href="../css/styles.css?v=20260929-3">
+</head>
+<body>
+
+    <header class="header">
+        <a class="logo" href="../index.html">TIENDA DEMO</a>
+
+        <div class="header-derecha">
+            <nav class="nav" aria-label="Menú principal">
+            <a href="../index.html">Inicio</a>
+            <a href="quienes-somos.html">Quiénes somos</a>
+            <a class="activo" href="catalogo.html">Catálogo</a>
+        </nav>
+
+            <a class="cuenta-link" href="cuenta.html">Cuenta</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="pagina-encabezado pagina-moda">
+            <div class="contenedor">
+                <p class="titulo-pequeno">TENDENCIAS</p>
+                <h1>Productos de moda</h1>
+                <p class="texto-intro">
+                    Una selección de productos de prueba marcados como tendencia o destacados de temporada.
+                </p>
+            </div>
+        </section>
+
+        <section class="seccion-pagina">
+            <div class="contenedor">
+                <div id="productos-moda" class="productos"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Tienda Demo · Sitio de prueba</p>
+    </footer>
+
+    <dialog id="modal-producto" class="modal-producto">
+        <button id="cerrar-modal" class="cerrar-modal" type="button" aria-label="Cerrar producto">×</button>
+        <div id="modal-contenido"></div>
+    </dialog>
+
+    <script src="../js/productos.js?v=20260929-2"></script>
+    <script src="../js/script.js?v=20260929-2"></script>
+</body>
+</html>

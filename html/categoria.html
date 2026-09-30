@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Demo | Categoría</title>
+    <link rel="stylesheet" href="../css/styles.css?v=20260929-3">
+</head>
+<body>
+
+    <header class="header">
+        <a class="logo" href="../index.html">TIENDA DEMO</a>
+
+        <div class="header-derecha">
+            <nav class="nav" aria-label="Menú principal">
+            <a href="../index.html">Inicio</a>
+            <a href="quienes-somos.html">Quiénes somos</a>
+            <a class="activo" href="catalogo.html">Catálogo</a>
+        </nav>
+
+            <a class="cuenta-link" href="cuenta.html">Cuenta</a>
+        </div>
+    </header>
+
+    <main id="pagina-categoria" class="pagina-categoria">
+        <section class="categoria-barra-sticky">
+            <div class="contenedor categoria-barra-contenido">
+                <a class="categoria-volver" href="catalogo.html">← Catálogo</a>
+
+                <div class="categoria-buscador">
+                    <span class="buscador-icono" aria-hidden="true">⌕</span>
+
+                    <input
+                        id="buscador-categoria"
+                        type="search"
+                        placeholder="Buscar productos..."
+                        autocomplete="off"
+                    >
+
+                    <button
+                        id="limpiar-busqueda-categoria"
+                        class="limpiar-busqueda"
+                        type="button"
+                        aria-label="Limpiar búsqueda"
+                        hidden
+                    >
+                        ×
+                    </button>
+                </div>
+
+                <button
+                    id="alternar-filtros"
+                    class="boton-alternar-filtros"
+                    type="button"
+                    aria-expanded="true"
+                    aria-controls="panel-filtros"
+                >
+                    Ocultar filtros
+                </button>
+            </div>
+
+            <div
+                id="host-filtros-movil"
+                class="contenedor host-filtros-movil"
+            ></div>
+        </section>
+
+        <section class="categoria-cabecera">
+            <div class="contenedor">
+                <p class="categoria-miga">
+                    Catálogo / <span id="categoria-ruta">Categoría</span>
+                </p>
+
+                <div class="categoria-titulo-fila">
+                    <div>
+                        <p class="titulo-pequeno">COLECCIÓN</p>
+                        <h1 id="categoria-titulo">Categoría</h1>
+                    </div>
+
+                    <p id="cantidad-resultados" class="cantidad-resultados"></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="categoria-contenido">
+            <div class="contenedor categoria-layout">
+                <div id="ancla-filtros-desktop" class="ancla-filtros-desktop">
+                    <aside id="panel-filtros" class="panel-filtros">
+                    <div class="filtro-bloque">
+                        <h2>Catálogo</h2>
+                        <nav id="filtro-categorias" class="filtro-categorias"></nav>
+                    </div>
+
+                    <div class="filtro-bloque">
+                        <h2>Estilo</h2>
+                        <div id="filtro-estilos" class="filtro-estilos"></div>
+                    </div>
+
+                    <div class="filtro-bloque">
+                        <h2>Disponibilidad</h2>
+
+                        <label class="filtro-check">
+                            <input
+                                id="solo-disponibles"
+                                type="checkbox"
+                            >
+                            <span>Solo con stock</span>
+                        </label>
+                    </div>
+                    </aside>
+                </div>
+
+                <section class="categoria-resultados" aria-label="Productos de la categoría">
+                    <div id="productos-categoria" class="productos productos-categoria"></div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Tienda Demo · Sitio de prueba</p>
+    </footer>
+
+    <dialog id="modal-producto" class="modal-producto">
+        <div class="detalle-barra">
+            <button id="cerrar-modal" class="volver-producto" type="button" aria-label="Volver">
+                <span aria-hidden="true">←</span>
+                Volver
+            </button>
+        </div>
+
+        <div id="modal-contenido"></div>
+    </dialog>
+
+    <script src="../js/productos.js?v=20260929-2"></script>
+    <script src="../js/script.js?v=20260929-2"></script>
+</body>
+</html>

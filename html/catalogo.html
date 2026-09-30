@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Demo | Catálogo</title>
+    <link rel="stylesheet" href="../css/styles.css?v=20260929-3">
+</head>
+<body>
+
+    <header class="header">
+        <a class="logo" href="../index.html">TIENDA DEMO</a>
+
+        <div class="header-derecha">
+            <nav class="nav" aria-label="Menú principal">
+            <a href="../index.html">Inicio</a>
+            <a href="quienes-somos.html">Quiénes somos</a>
+            <a class="activo" href="catalogo.html">Catálogo</a>
+        </nav>
+
+            <a class="cuenta-link" href="cuenta.html">Cuenta</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="pagina-encabezado catalogo-encabezado">
+            <div class="contenedor">
+                <p class="titulo-pequeno">COLECCIÓN</p>
+                <h1>Catálogo</h1>
+                <p class="texto-intro">
+                    Explora todas las prendas disponibles, organizadas por secciones.
+                </p>
+            </div>
+        </section>
+
+        <section class="catalogo-control-sticky" id="catalogo-control">
+            <div class="contenedor">
+                <div class="catalogo-control-fila">
+                    <div class="buscador-caja buscador-catalogo-grande">
+                        <span class="buscador-icono" aria-hidden="true">⌕</span>
+
+                        <input
+                            id="buscador-catalogo"
+                            type="search"
+                            placeholder="Buscar en todo el catálogo..."
+                            autocomplete="off"
+                        >
+
+                        <button
+                            id="limpiar-busqueda"
+                            class="limpiar-busqueda"
+                            type="button"
+                            aria-label="Limpiar búsqueda"
+                            hidden
+                        >
+                            ×
+                        </button>
+                    </div>
+
+                    <button
+                        id="alternar-filtros-catalogo"
+                        class="boton-filtros-catalogo"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="filtros-catalogo-panel"
+                    >
+                        Filtros
+                    </button>
+                </div>
+
+                <p id="estado-busqueda" class="estado-busqueda"></p>
+
+                <div id="filtros-catalogo-panel" class="filtros-catalogo-panel" hidden>
+                    <div class="filtros-catalogo-grid">
+                        <div class="filtro-bloque-catalogo">
+                            <h3>Catálogo</h3>
+                            <div id="filtros-categorias-catalogo" class="filtros-check-lista"></div>
+                        </div>
+
+                        <div class="filtro-bloque-catalogo">
+                            <h3>Estilo</h3>
+                            <div id="filtros-estilos-catalogo" class="filtros-check-lista"></div>
+                        </div>
+
+                        <div class="filtro-bloque-catalogo">
+                            <h3>Disponibilidad</h3>
+
+                            <label class="filtro-check">
+                                <input id="solo-disponibles-catalogo" type="checkbox">
+                                <span>Solo con stock</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filtros-catalogo-pie">
+                        <button
+                            id="limpiar-filtros-catalogo"
+                            class="limpiar-filtros-catalogo"
+                            type="button"
+                        >
+                            Limpiar filtros
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resultados-busqueda" class="seccion-pagina resultados-busqueda" hidden>
+            <div class="contenedor">
+                <div class="resultados-cabecera">
+                    <p class="titulo-pequeno">RESULTADOS</p>
+                    <h2 id="titulo-resultados">Resultados de búsqueda</h2>
+                </div>
+
+                <div id="productos-busqueda" class="productos"></div>
+            </div>
+        </section>
+
+        <section class="carrusel-moda" aria-label="Productos de moda">
+            <div class="contenedor">
+                <div class="carrusel-titulo">
+                    <div>
+                        <p class="titulo-pequeno">SELECCIÓN</p>
+                        <h2>Productos de moda</h2>
+                    </div>
+
+                    <div class="carrusel-controles">
+                        <button id="moda-anterior" class="carrusel-flecha" type="button" aria-label="Producto anterior">←</button>
+                        <button id="moda-siguiente" class="carrusel-flecha" type="button" aria-label="Producto siguiente">→</button>
+                    </div>
+                </div>
+
+                <div id="carrusel-moda-producto" class="carrusel-producto"></div>
+                <div id="carrusel-indicadores" class="carrusel-indicadores" aria-hidden="true"></div>
+            </div>
+        </section>
+
+        <section class="seccion-pagina catalogo-secciones">
+            <div class="contenedor">
+                <div id="catalogo-por-secciones"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Tienda Demo · Sitio de prueba</p>
+    </footer>
+
+    <dialog id="modal-producto" class="modal-producto">
+        <div class="detalle-barra">
+            <button id="cerrar-modal" class="volver-producto" type="button" aria-label="Volver al catálogo">
+                <span aria-hidden="true">←</span>
+                Volver
+            </button>
+        </div>
+
+        <div id="modal-contenido"></div>
+    </dialog>
+
+    <script src="../js/productos.js?v=20260929-2"></script>
+    <script src="../js/script.js?v=20260929-2"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Demo | Cuenta</title>
+    <link rel="stylesheet" href="../css/styles.css?v=20260929-3">
+</head>
+<body>
+
+    <header class="header">
+        <a class="logo" href="../index.html">TIENDA DEMO</a>
+
+        <div class="header-derecha">
+            <nav class="nav" aria-label="Menú principal">
+                <a href="../index.html">Inicio</a>
+                <a href="quienes-somos.html">Quiénes somos</a>
+                <a href="catalogo.html">Catálogo</a>
+            </nav>
+
+            <a class="cuenta-link activo" href="cuenta.html">Cuenta</a>
+        </div>
+    </header>
+
+    <main class="cuenta-pagina">
+        <section class="cuenta-presentacion">
+            <div>
+                <p class="titulo-pequeno">TU CUENTA</p>
+                <h1>Compra con una experiencia más personal.</h1>
+                <p>
+                    Esta sección es un prototipo visual. Más adelante podrá conectarse
+                    a un sistema real de autenticación para guardar pedidos, favoritos,
+                    direcciones y datos del perfil.
+                </p>
+
+                <ul class="cuenta-beneficios">
+                    <li>Consultar pedidos</li>
+                    <li>Guardar favoritos</li>
+                    <li>Recordar datos de compra</li>
+                    <li>Acceder con correo o Google</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="cuenta-panel" aria-label="Acceso a cuenta">
+            <div class="cuenta-tabs" role="tablist" aria-label="Cuenta">
+                <button
+                    id="tab-login"
+                    class="cuenta-tab activo"
+                    type="button"
+                    role="tab"
+                    aria-selected="true"
+                    aria-controls="panel-login"
+                >
+                    Iniciar sesión
+                </button>
+
+                <button
+                    id="tab-registro"
+                    class="cuenta-tab"
+                    type="button"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="panel-registro"
+                >
+                    Crear cuenta
+                </button>
+            </div>
+
+            <div id="panel-login" class="cuenta-form-panel activo" role="tabpanel">
+                <div class="cuenta-form-encabezado">
+                    <h2>Bienvenido</h2>
+                    <p>Ingresa con tu correo o continúa con Google.</p>
+                </div>
+
+                <form id="form-login" class="cuenta-form">
+                    <label for="login-email">Correo electrónico</label>
+                    <input
+                        id="login-email"
+                        type="email"
+                        autocomplete="email"
+                        placeholder="correo@ejemplo.cl"
+                        required
+                    >
+
+                    <label for="login-password">Contraseña</label>
+                    <input
+                        id="login-password"
+                        type="password"
+                        autocomplete="current-password"
+                        placeholder="••••••••"
+                        required
+                    >
+
+                    <button class="cuenta-boton-principal" type="submit">
+                        Iniciar sesión
+                    </button>
+                </form>
+
+                <div class="cuenta-separador">
+                    <span>o</span>
+                </div>
+
+                <button id="google-login" class="cuenta-boton-google" type="button">
+                    Continuar con Google
+                </button>
+
+                <button id="ir-registro" class="cuenta-enlace-boton" type="button">
+                    ¿No tienes cuenta? Crear una
+                </button>
+            </div>
+
+            <div id="panel-registro" class="cuenta-form-panel" role="tabpanel" hidden>
+                <div class="cuenta-form-encabezado">
+                    <h2>Crea tu cuenta</h2>
+                    <p>Por ahora este formulario no guarda información real.</p>
+                </div>
+
+                <form id="form-registro" class="cuenta-form">
+                    <label for="registro-nombre">Nombre</label>
+                    <input
+                        id="registro-nombre"
+                        type="text"
+                        autocomplete="name"
+                        placeholder="Tu nombre"
+                        required
+                    >
+
+                    <label for="registro-email">Correo electrónico</label>
+                    <input
+                        id="registro-email"
+                        type="email"
+                        autocomplete="email"
+                        placeholder="correo@ejemplo.cl"
+                        required
+                    >
+
+                    <label for="registro-password">Contraseña</label>
+                    <input
+                        id="registro-password"
+                        type="password"
+                        autocomplete="new-password"
+                        minlength="8"
+                        placeholder="Mínimo 8 caracteres"
+                        required
+                    >
+
+                    <label for="registro-password-confirmar">Confirmar contraseña</label>
+                    <input
+                        id="registro-password-confirmar"
+                        type="password"
+                        autocomplete="new-password"
+                        minlength="8"
+                        placeholder="Repite la contraseña"
+                        required
+                    >
+
+                    <label class="cuenta-check">
+                        <input type="checkbox" required>
+                        <span>Acepto los términos de la tienda demo.</span>
+                    </label>
+
+                    <button class="cuenta-boton-principal" type="submit">
+                        Crear cuenta
+                    </button>
+                </form>
+
+                <button id="ir-login" class="cuenta-enlace-boton" type="button">
+                    Ya tengo una cuenta
+                </button>
+            </div>
+
+            <p id="cuenta-mensaje" class="cuenta-mensaje" aria-live="polite"></p>
+
+            <p class="cuenta-aviso-demo">
+                Demo visual: no se guardan correos, contraseñas ni datos personales.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Tienda Demo · Sitio de prueba</p>
+    </footer>
+
+    <script src="../js/cuenta.js?v=20260929-1"></script>
+</body>
+</html>
